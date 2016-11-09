@@ -186,10 +186,7 @@
 												<option value="auth_sha1_v2_compatible">auth_sha1_v2_compatible</option>
 												<option value="auth_sha1_v4">auth_sha1_v4</option>
 												<option value="auth_sha1_v4_compatible">auth_sha1_v4_compatible</option>
-												<option value="auth_aes128_sha1">auth_aes128_sha1</option>
-												<option value="auth_aes128_sha1_compatible">auth_aes128_sha1_compatible</option>
-												<option value="auth_aes128_md5">auth_aes128_md5</option>
-												<option value="auth_aes128_md5_compatible">auth_aes128_md5_compatible</option>
+												
 											</select>
 										</div>
 
@@ -361,7 +358,7 @@
 									</div>
 									<div class="card-action">
 										<div class="card-action-btn pull-left">
-											<button class="btn btn-flat waves-attach" id="portreset" ><span class="icon">check</span>&nbsp;重置端口</button>
+											<p>不支持自定义端口</p>
 										</div>
 									</div>
 								</div>
