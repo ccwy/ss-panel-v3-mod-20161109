@@ -24,11 +24,11 @@ $System_Config['muKey'] = '';
 $System_Config['mailDriver'] = 'mailgun';   // mailgun or smtp
 
 // 用户签到设置
-$System_Config['checkinMin'] = '1989';       // 签到最少流量 单位MB
-$System_Config['checkinMax'] = '8964';       // 签到最多流量
+$System_Config['checkinMin'] = '1';       // 签到最少流量 单位MB
+$System_Config['checkinMax'] = '500';       // 签到最多流量
 
 //
-$System_Config['defaultTraffic'] = '100';      // 用户初始流量 单位GB
+$System_Config['defaultTraffic'] = '10';      // 用户初始流量 单位GB
 
 // 注册后获得的邀请码数量
 $System_Config['inviteNum'] = '0';
@@ -83,7 +83,7 @@ $System_Config['enable_paymentwall']='false';
 
 
 #用户过期时间，在注册时设置。（天）
-$System_Config['user_expire_in_default']='99999';
+$System_Config['user_expire_in_default']='999';
 
 #Radius数据库设置
 $System_Config['radius_db_host']='';
@@ -103,10 +103,10 @@ $System_Config['duoshuo_apptoken']="";
 
 
 #节点离线设置
-$System_Config['node_offline_warn']='true';
+$System_Config['node_offline_warn']='false';
 
 #异地登陆提示
-$System_Config['login_warn']='true';
+$System_Config['login_warn']='false';
 
 #端口池
 $System_Config['min_port']='10000';
@@ -117,11 +117,11 @@ $System_Config['pacp_offset']='-20000';
 $System_Config['pacpp_offset']='-20000';
 
 #测速周期/h
-$System_Config['Speedtest_duration']='6';
+$System_Config['Speedtest_duration']='6666';
 
 
 #随机分组，注册时随机分配到的分组，多个分组请用英文半角逗号分隔。
-$System_Config['ramdom_group']='0';
+$System_Config['ramdom_group']='1';
 
 #Wecenter 数据库信息
 $System_Config['wecenter_db_host']='localhost';
@@ -144,7 +144,7 @@ $System_Config['wecenter_cookie_prefix']='mmg_';
 $System_Config['wecenter_cookie_key']='';
 
 #充值返利百分比
-$System_Config['code_payback']='20';
+$System_Config['code_payback']='0';
 
 #注册时的流量重置日以及需要重置的流量,0不重置
 $System_Config['reg_auto_reset_day']='0';
@@ -174,7 +174,7 @@ $System_Config['auto_backup_passwd']='zip password';
 
 
 #跳转延时,ms
-$System_Config['jump_delay']='1800';
+$System_Config['jump_delay']='800';
 
 
 
@@ -182,7 +182,7 @@ $System_Config['jump_delay']='1800';
 $System_Config['enable_invite_code']='true';
 
 #是否启用邮箱验证码
-$System_Config['enable_email_verify']='true';
+$System_Config['enable_email_verify']='false';
 
 #邮箱验证码有效期
 $System_Config['email_verify_ttl']='3600';
@@ -192,19 +192,19 @@ $System_Config['email_verify_iplimit']='10';
 
 
 #注册时默认加密方式
-$System_Config['reg_method']='rc4-md5';
+$System_Config['reg_method']='aes-256-cfb';
 
 #注册时默认协议
-$System_Config['reg_protocol']='origin';
+$System_Config['reg_protocol']='auth_sha1_v2_compatiblen';
 
 #注册时默认协议参数
-$System_Config['reg_protocol_param']='';
+$System_Config['reg_protocol_param']='bing.com';
 
 #注册时默认混淆方式
-$System_Config['reg_obfs']='plain';
+$System_Config['reg_obfs']='tls1.2_ticket_auth_compatible';
 
 #注册时默认混淆参数
-$System_Config['reg_obfs_param']='';
+$System_Config['reg_obfs_param']='bing.com';
 
 #注册时默认禁止访问IP列表，半角英文逗号分割
 $System_Config['reg_forbidden_ip']='127.0.0.0/8,::1/128';
@@ -213,7 +213,7 @@ $System_Config['reg_forbidden_ip']='127.0.0.0/8,::1/128';
 $System_Config['reg_forbidden_port']='';
 
 #是否将登陆线程和IP绑定
-$System_Config['enable_login_bind_ip']='true';
+$System_Config['enable_login_bind_ip']='false';
 
 
 
@@ -221,10 +221,10 @@ $System_Config['enable_login_bind_ip']='true';
 $System_Config['enable_class_expire_reset']='true';
 
 #等级到期时重置为的流量值，GB
-$System_Config['enable_class_expire_reset_traffic']='0';
+$System_Config['enable_class_expire_reset_traffic']='5';
 
 #账户到期时是否重置流量
-$System_Config['enable_account_expire_reset']='true';
+$System_Config['enable_account_expire_reset']='false';
 
 #账户到期时重置为的流量值，GB
 $System_Config['enable_account_expire_reset_traffic']='0';
@@ -233,7 +233,7 @@ $System_Config['enable_account_expire_reset_traffic']='0';
 $System_Config['enable_bought_reset']='true';
 
 #账户到期之后是否会删除账户
-$System_Config['enable_account_expire_delete']='true';
+$System_Config['enable_account_expire_delete']='false';
 
 #账户到期几天之后会删除账户
 $System_Config['enable_account_expire_delete_days']='0';
@@ -266,7 +266,7 @@ $System_Config['enable_analytics_code']='false';
 $System_Config['enable_alipay']='true';
 
 #是否启用捐赠相关功能
-$System_Config['enable_donate']='true';
+$System_Config['enable_donate']='false';
 
 
 
