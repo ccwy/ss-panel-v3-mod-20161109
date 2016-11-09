@@ -40,10 +40,10 @@
 					</a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li>
-							<a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>用户中心</a>
+							<a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>控制中心</a>
 						</li>
 						<li>
-							<a class="padding-right-lg waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>登出</a>
+							<a class="padding-right-lg waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>退出</a>
 						</li>
 					</ul>
 				{else}
@@ -52,10 +52,10 @@
 					</a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li>
-							<a class="padding-right-lg waves-attach" href="/auth/login"><span class="icon icon-lg margin-right">account_box</span>登录</a>
+							<a class="padding-right-lg waves-attach" href="/auth/login"><span class="icon icon-lg margin-right">account_box</span>登录账号</a>
 						</li>
 						<li>
-							<a class="padding-right-lg waves-attach" href="/auth/register"><span class="icon icon-lg margin-right">pregnant_woman</span>注册</a>
+							<a class="padding-right-lg waves-attach" href="/auth/register"><span class="icon icon-lg margin-right">pregnant_woman</span>注册账号</a>
 						</li>
 					</ul>
 				{/if}
@@ -66,32 +66,35 @@
 	<nav aria-hidden="true" class="menu menu-left nav-drawer nav-drawer-md" id="ui_menu" tabindex="-1">
 		<div class="menu-scroll">
 			<div class="menu-content">
-				<a class="menu-logo" href="/"><i class="icon icon-lg">restaurant_menu</i>&nbsp;菜单</a>
+				<a class="menu-logo" href="/"><i class="icon icon-lg">restaurant_menu</i>&nbsp;导航</a>
 				<ul class="nav">
 					<li>
-						<a  href="/"><i class="icon icon-lg">bookmark_border</i>&nbsp;首页</a>
+						<a  href="/"><i class="icon icon-lg">bookmark_border</i>&nbsp;我的首页</a>
 					</li>
 					<li>
-						<a  href="/tos"><i class="icon icon-lg">text_format</i>&nbsp;TOS</a>
+						<a  href="/tos"><i class="icon icon-lg">text_format</i>&nbsp;服务条款</a>
 					</li>
-					<li>
-						<a  href="/code"><i class="icon icon-lg">code</i>&nbsp;邀请码</a>
-					</li>
+					
 					{if $user->isLogin}
 					<li>
-						<a  href="/user"><i class="icon icon-lg">person</i>&nbsp;用户中心</a>
+						<a  href="/user"><i class="icon icon-lg">person</i>&nbsp;控制中心</a>
 					</li>
 					<li>
 						<a  href="/user/logout"><i class="icon icon-lg">call_missed_outgoing</i>&nbsp;退出</a>
 					</li>
 					{else}
 					<li>
-						<a  href="/auth/login"><i class="icon icon-lg">vpn_key</i>&nbsp;登录</a>
+						<a  href="/auth/login"><i class="icon icon-lg">vpn_key</i>&nbsp;登录账号</a>
 					</li>
 					<li>
-						<a  href="/auth/register"><i class="icon icon-lg">pregnant_woman</i>&nbsp;注册</a>
+						<a  href="/auth/register"><i class="icon icon-lg">pregnant_woman</i>&nbsp;注册账号</a>
 					</li>
 					{/if}
+					
+					<li>
+						<a  href="/code"><i class="icon icon-lg">code</i>&nbsp;注册码</a>
+					</li>
+					
 				</ul>
 			</div>
 		</div>
