@@ -28,7 +28,7 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">系统中最新公告</p>
-										<p>其他公告请到<a href="/user/announcement"/>公告面板</a>查看。</p>
+										
 										{if $ann != null}
 										<p>{$ann->content}</p>
 										{/if}
@@ -42,10 +42,17 @@
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">All-in-One</p>
 										<p>这里为您提供了自动化地配置文件生成，包含了所有 Shadowsocks 服务器的信息，方便您在诸多的服务器中快速添加，快速切换。</p>
-										<p><a href="https://bit.no.com:43110/shadowsocksr.bit"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows 下载 C# 版</a>，解压，然后下载<a href="/user/getpcconf">这个</a>，放到程序目录下，运行程序，选择一个合适的服务器，更新一下PAC为绕过国内IP，然后开启系统代理即可上网。</p>
+										<p><a href="/downloads/client/ShadowsocksR-3.9.6.2e-win.7z"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows 下载这个</a>（版本：3.9.6.2），解压，然后下载<a href="/user/getpcconf">这个</a>，放到程序目录下，运行程序，选择一个合适的服务器，更新一下PAC为绕过国内IP，然后开启系统代理即可上网。</p>
 										<p><a href="https://github.com/qinyuhang/ShadowsocksX-NG/releases"><i class="icon icon-lg">laptop_mac</i>&nbsp;Mac OS X下载这个</a>，安装，然后下载<a href="/user/getpcconf">这个</a>，运行程序，小飞机上右键 服务器列表 子菜单 的 “导入服务器配置文件...” 导入这个文件，然后选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</p>
+										
+										{if $user->class>=1}
+										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 请到App Store商店下载shadowrocket（小火箭）安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue">（推荐这种方法）</font></p>										
+										{else}
+										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 请到App Store商店下载shadowrocket（小火箭）安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue">（推荐这种方法）</font></p>
+										{/if}
+										
 										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 下载<a href="/link/{$ios_token}">这个</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p>
-										<p><a href="https://bit.no.com:43110/shadowsocksr.bit"><i class="icon icon-lg">android</i>&nbsp;Android下载 Android 版</a>，安装，然后在手机上默认浏览器中点击<a id="android_add" href="{$android_add}">这个</a>，然后点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。</p>
+										<p><a href="/downloads/client/ssr_3.2.7.8.apk"><i class="icon icon-lg">android</i>&nbsp;Android下载这个</a>（最新版本：3.2.7.8）安装，然后在手机上默认浏览器中点击<a id="android_add" href="{$android_add}">这个</a>，然后点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。</p>
 									</div>
 									
 								</div>
@@ -56,21 +63,66 @@
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">帐号使用情况</p>
 										<dl class="dl-horizontal">
-											<dt>帐号等级</dt>
-											<dd>{$user->class}</dd>
+											{if $user->enable==1}
+										    <dt>状态：<font color="blue">正常</font></dt>	
+										    {else}
+										    <dt>状态：<font color="red">禁用，无法使用任何节点，如有疑问请联系管理员</font></dt>	
+										    {/if}
+												
+											<dt>余额：<font color="blue">{$user->money} 元</font></dt>	
 
-											<dt>等级过期时间</dt>
-											<dd>{$user->class_expire}</dd>
-
-											<dt>帐号过期时间</dt>
-											<dd>{$user->expire_in}</dd>
-											
-											<dt>速度限制</dt>
-											{if $user->node_speedlimit!=0}
-											<dd>{$user->node_speedlimit}Mbps</dd>
-											{else}
-											<dd>不限速</dd>
+										
+										
+											{if $user->class==0}
+											<dt>等级：<font color="blue">免费用户</font></dt>
 											{/if}
+											{if $user->class==1}
+											<dt>等级：<font color="blue">逸纸轩老用户</font></dt>
+											{/if}
+											{if $user->class==2}
+											<dt>等级：<font color="blue">无限期用户</font></dt>
+											{/if}
+											
+											{if $user->class==3}
+											<dt>等级：<font color="blue">保号套餐会员</font></dt>
+											{/if}
+											{if $user->class==4}
+											<dt>等级：<font color="blue">月付普通VIP会员</font></dt>
+											{/if}
+											
+											{if $user->class==5}
+											<dt>等级：<font color="blue">月付高级VIP会员</font></dt>
+											{/if}										
+											{if $user->class==6}
+											<dt>等级：<font color="blue">月付高级VIP会员</font></dt>
+											{/if}
+											
+											{if $user->class==7}
+											<dt>等级：<font color="blue">特殊端口会员</font></dt>
+											{/if}											
+											{if $user->class==8}
+											<dt>等级：<font color="blue">特殊端口会员</font></dt>
+											{/if}
+											
+											{if $user->class==10}
+											<dt>等级：<font color="blue">钻石VIP会员</font></dt>
+											{/if}
+											
+											
+											{if $user->class==99}
+											<dt>等级：<font color="blue">超级管理员</font></dt>
+											{/if}
+											
+											{if $user->node_speedlimit!=0}
+											<dt>速度限制：<font color="red">你已被限速至 {$user->node_speedlimit}Mbps ，大概是因为你长时间高速下载，如有疑问请联系管理员</font></dt>
+											{else}
+											<dt>速度限制：<font color="blue">不限速</font></dt>																														
+											{/if}
+											
+											
+											<dt>等级到期时间：<font color="blue">{$user->class_expire}</font></dt>											
+
+											<dt>账号过期时间：<font color="blue">{$user->expire_in}</font></dt>
 										</dl>
 									</div>
 									
@@ -146,14 +198,16 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">续命获取流量</p>
-											<p>流量不会重置，可以通过续命获取流量。</p>
+										<p class="card-heading">签到获取流量</p>
+											<p>流量不会重置，可以通过签到获取流量。</p>
 
-											<p>每次续命可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
+											<p>每次签到可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
 										
-											<p>每天可以续命一次。您可以点击按钮或者摇动手机来续命。</p>
+											<p>每天可以签到一次。您可以点击按钮或者摇动手机来签到。</p>
+																						
+											<p>上次使用时间：<code>{$user->lastSsTime()}</code></p>
 
-											<p>上次续命时间：<code>{$user->lastCheckInTime()}</code></p>
+											<p>上次签到时间：<code>{$user->lastCheckInTime()}</code></p>
 											
 											<p id="checkin-msg"></p>
 											
@@ -166,10 +220,10 @@
 										<div class="card-action-btn pull-left">
 											{if $user->isAbleToCheckin() }
 												<p id="checkin-btn">
-													<button id="checkin" class="btn btn-brand btn-flat waves-attach"><span class="icon">check</span>&nbsp;续命</button>
+													<button id="checkin" class="btn btn-brand btn-flat waves-attach"><span class="icon">check</span>&nbsp;签到</button>
 												</p>
 											{else}
-												<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;不能续命</a></p>
+												<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;不能签到</a></p>
 											{/if}
 										</div>
 									</div>
@@ -182,16 +236,19 @@
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">连接信息</p>
 											<dl class="dl-horizontal">
-												<dt>端口</dt>
-												<dd>{$user->port}</dd>
-												<dt>密码</dt>
-												<dd>{$user->passwd}</dd>
-												<!--
-												<dt>加密方式</dt>
-												<dd>{$user->method}</dd>
-												-->
-												<dt>上次使用</dt>
-												<dd>{$user->lastSsTime()}</dd>
+												<dt>服务器端口：{$user->port}</dt>
+																								
+												<dt>连接密码：{$user->passwd}</dt>
+																								
+												<dt>加密方式：{$user->method}</dt>
+												
+												<dt>混淆协议：{$user->protocol}</dt>
+												
+												<dt>协议参数：{$user->protocol_param}</dt>
+												
+												<dt>混淆方式：{$user->obfs}</dt>
+												
+												<dt>混淆参数：{$user->obfs_param}</dt>
 											</dl>
 									</div>
 									
