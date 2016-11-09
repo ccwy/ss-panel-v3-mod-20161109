@@ -6,7 +6,7 @@
 $System_Config['key'] = '';
 $System_Config['debug'] =  'false';  //  正式环境请确保为false
 $System_Config['appName'] = '';             //站点名称
-$System_Config['baseUrl'] = 'https://zhaojin97.cn';            // 站点地址
+$System_Config['baseUrl'] = 'http://zhaojin97.cn';            // 站点地址
 $System_Config['timeZone'] = 'PRC';        // RPC 天朝时间  UTC 格林时间
 $System_Config['pwdMethod'] = 'sha256';       // 密码加密   可选 md5,sha256
 $System_Config['salt'] = '';               // 密码加密用，从旧版升级请留空
@@ -195,7 +195,7 @@ $System_Config['email_verify_iplimit']='10';
 $System_Config['reg_method']='aes-256-cfb';
 
 #注册时默认协议
-$System_Config['reg_protocol']='auth_sha1_v2_compatiblen';
+$System_Config['reg_protocol']='auth_sha1_v2_compatible';
 
 #注册时默认协议参数
 $System_Config['reg_protocol_param']='bing.com';
