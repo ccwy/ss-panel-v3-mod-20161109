@@ -27,7 +27,7 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">注意！</p>
-										<p>下面为您的 APN 下载信息。</p>
+										<p>下面为 特殊端口 信息，在你的地区使用是否有效，会不会出现未知问题等，本站不提供任何解答，请不要宣扬此信息。</p>																														
 									</div>
 									
 								</div>
@@ -38,29 +38,69 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">配置信息</p>
-										<p>{$json_show}</p>
+										<p>地址：<span class="label label-accent"> 
+										本站任意节点地址																					
+										</span></p>
+																					
+										<p>端口：<span class="label label-green"> 
+										137、138、53、8080端口
+										</span></p>
+																					
+										<p>加密方式：<span class="label label-brand"> 
+										aes-256-cfb
+										</span></p>
+																					
+										<p>协议：<span class="label label-brand-accent"> 
+										auth_sha1_compatible
+										</span></p>
+										
+      								    <p>混淆方式：<span class="label label-red"> 
+   										http_simple_compatible
+										</span></p>
+								 		
+								        <p>混淆参数：<span class="label label-orange">
+										以下仅供参考，不保证是否有用。
+										</span></p>
+										联通混淆参数有三种:
+										<br>
+										①m.10010.com
+										<br>
+										②m.10010.com/r/nX-Online-Host:m.10010.com
+										<br>
+										③m.10010.com
+										<br>
+										X-Online-Host:m.10010.com
+										<br>
+										其中m.10010.com可更改成wap.10010.com
+										<br>
+										</span></p>
+										移动混淆参数有三种：
+										<br>
+										①wap.10086.cn
+										<br>
+										②wap.10086.cn/r/nX-Online-Host:wap.10086.cn
+										<br>
+										③wap.10086.cn
+										<br>
+										X-Online-Host:wap.10086.cn										
+										</span></p>
+										电信要有爱玩爱看爱听的免费定向流量包：
+										<br>
+										①cdn.4g.play.cn
+										<br>
+								           ②ltetp.tv189.com
+										<br>
+										③iting.music.189.cn
+										<br>
+
+④dl.music.189.cn	
+										</span></p>
+										
 									</div>
 									
 								</div>
 							</div>
-						</div>
-						
-						<div class="col-lg-12 col-sm-12">
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">配置方法</p>
-										<p>本方法仅限iOS用户在 移动/联通/电信 3G或4G网络下使用</p>
-                                        <p>1 根据你的运营商在safari中输入与你运营商对应的地址</p>
-                                        <p>2 访问这个地址后会跳转到设置中自动弹出安装描述文件弹窗</p>
-                                        <p>3 之后点击安装，如有密码会提示你输入密码，请正确输入设备密码</p>
-                                        <p>4 如果出现警告，忽略并点击安装，经再次确认安装后就已经安装完成配置文件了，点击右上角完成结束配置</p>
-                                        <p>5 该方法如果需要使用请切换到3/4G网络下，打开网页时会提示你输入用户名与密码，请按照配置信息中内容输入</p>
-									</div>
-									
-								</div>
-							</div>
-						</div>
+						</div>						
 						
 					</div>
 				</div>
@@ -75,6 +115,7 @@
 
 
 {include file='user/footer.tpl'}
+
 
 
 
