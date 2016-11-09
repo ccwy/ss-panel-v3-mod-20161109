@@ -10,7 +10,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 col-lg-push-0 col-sm-12 col-sm-push-0">
-						<h1 class="content-heading">{$config["appName"]}</h1>
+						<h1 class="content-heading">欢迎来到{$config["appName"]}</h1>
 					</div>
 				</div>
 			</div>
@@ -24,7 +24,7 @@
 								<div class="card">
 									<div class="card-main">
 										<div class="card-inner">
-											<p>请问您今天要来点兔子吗？</p>
+											<p>不忘记自己最初的梦想，或许你就有实现梦想的一天，但真到那一天了，你还是你吗？</p>
 										</div>
 									</div>
 								</div>
@@ -35,14 +35,14 @@
 								<div class="card card-brand">
 									<div class="card-main">
 										<div class="card-inner">
-											<p class="card-heading">用户面板</p>
+											<p class="card-heading">控制中心</p>
 											<p>
 												您可以点击按钮进入面板。
 											</p>
 										</div>
 										<div class="card-action">
 											<div class="card-action-btn pull-left">
-												<a class="btn btn-flat waves-attach waves-light waves-effect" href="/user"><span class="icon">airline_seat_recline_normal</span>&nbsp;进入</a>
+												<a class="btn btn-flat waves-attach waves-light waves-effect" href="/user"><span class="icon">airline_seat_recline_normal</span>&nbsp;进入控制面板</a>
 											</div>
 										</div>
 									</div>
@@ -53,14 +53,14 @@
 								<div class="card card-brand">
 									<div class="card-main">
 										<div class="card-inner">
-											<p class="card-heading">注册</p>
+											<p class="card-heading">注册账号</p>
 											<p>
-												没有账户？点击按钮注册一个。
+												没有账号？请点击注册账号申请一个。
 											</p>
 										</div>
 										<div class="card-action">
 											<div class="card-action-btn pull-left">
-												<a class="btn btn-flat waves-attach waves-light waves-effect" href="/auth/register"><span class="icon">pregnant_woman</span>&nbsp;注册</a>
+												<a class="btn btn-flat waves-attach waves-light waves-effect" href="/auth/register"><span class="icon">pregnant_woman</span>&nbsp;注册账号</a>
 											</div>
 										</div>
 									</div>
@@ -71,14 +71,14 @@
 								<div class="card card-brand-accent">
 									<div class="card-main">
 										<div class="card-inner">
-											<p class="card-heading">登录</p>
+											<p class="card-heading">登录账号</p>
 											<p>
-												有账户了？点击登录。
+												有账号了？请点击登录账号。
 											</p>
 										</div>
 										<div class="card-action">
 											<div class="card-action-btn pull-left">
-												<a class="btn btn-flat waves-attach waves-light waves-effect" href="/auth/login"><span class="icon">vpn_key</span>&nbsp;登录</a>
+												<a class="btn btn-flat waves-attach waves-light waves-effect" href="/auth/login"><span class="icon">vpn_key</span>&nbsp;登录账号</a>
 											</div>
 										</div>
 									</div>
