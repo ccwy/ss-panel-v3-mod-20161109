@@ -33,7 +33,7 @@
 									</div>
 									<div class="card-action">
 										<div class="card-action-btn pull-left">
-											<a class="btn btn-flat waves-attach" href="kill"><span class="icon">check</span>&nbsp;删除我的账户</a>
+											<p>你现在不能自杀！</p>
 										</div>
 									</div>
 								</div>
