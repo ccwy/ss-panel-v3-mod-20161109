@@ -77,7 +77,7 @@
 											<dt>等级：<font color="blue">免费用户</font></dt>
 											{/if}
 											{if $user->class==1}
-											<dt>等级：<font color="blue">逸纸轩老用户</font></dt>
+											<dt>等级：<font color="blue">老用户</font></dt>
 											{/if}
 											{if $user->class==2}
 											<dt>等级：<font color="blue">无限期用户</font></dt>
