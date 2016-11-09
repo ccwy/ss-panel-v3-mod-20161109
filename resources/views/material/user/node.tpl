@@ -77,7 +77,7 @@
 																			
 																			{if $node->sort > 2 && $node->sort != 5}
 																				<p>地址：<span class="label label-brand-accent"> 
-									                                        	本站任意节点地址(不包含谷歌节点）															
+									                                        	本站任意节点地址															
 									                                        	</span></p>
 																					
 									                                        	<p>端口：<span class="label label-brand-red"> 
