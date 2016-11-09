@@ -210,10 +210,10 @@
 					</a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li>
-							<a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>用户中心</a>
+							<a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>控制中心</a>
 						</li>
 						<li>
-							<a class="padding-right-lg waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>登出</a>
+							<a class="padding-right-lg waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>退出</a>
 						</li>
 					</ul>
 				{else}
@@ -236,7 +236,7 @@
 	<nav aria-hidden="true" class="menu menu-left nav-drawer nav-drawer-md" id="ui_menu" tabindex="-1">
 		<div class="menu-scroll">
 			<div class="menu-content">
-				<a class="menu-logo" href="/"><i class="icon icon-lg">person_pin_circle</i>&nbsp;用户面板</a>
+				<a class="menu-logo" href="/"><i class="icon icon-lg">person_pin_circle</i>&nbsp;控制面板</a>
 				<ul class="nav">
 					<li>
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_me">我的</a>
@@ -249,7 +249,7 @@
 							
 							<li>
 								<a href="/user/profile">
-									<i class="icon icon-lg">info</i>&nbsp;账户信息
+									<i class="icon icon-lg">info</i>&nbsp;账号资料
 								</a>
 							</li>
 							
@@ -261,13 +261,13 @@
 							
 							<li>
 								<a href="/user/invite">
-									<i class="icon icon-lg">loyalty</i>&nbsp;邀请码
+									<i class="icon icon-lg">loyalty</i>&nbsp;注册邀请码
 								</a>
 							</li>
 							
 							<li>
 								<a href="/user/announcement">
-									<i class="icon icon-lg">announcement</i>&nbsp;查看公告
+									<i class="icon icon-lg">announcement</i>&nbsp;公告汇总
 								</a>
 							</li>
 							
@@ -307,10 +307,10 @@
 							</li>
 						</ul>
 
-						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审查</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_detect">
-							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
-							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
+							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审查规则</a></li>
+							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;违规记录</a></li>
 						</ul>
 						
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_trade">帮助</a>
@@ -335,6 +335,12 @@
 						<ul class="menu-collapse collapse in" id="ui_menu_help">
 						
 						
+							<li><a href="http://svip.tzyee.net/list/2MXgc" target="_blank"><i class="icon icon-lg">card_giftcard</i>&nbsp;购买充值码</a></li>
+						<li>
+								<a href="/user/code">
+									<i class="icon icon-lg">code</i>&nbsp;充值
+								</a>
+							</li>
 							<li>
 								<a href="/user/shop">
 									<i class="icon icon-lg">shop</i>&nbsp;商店
@@ -342,15 +348,6 @@
 							</li>
 							
 							<li><a href="/user/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;购买记录</a></li>
-							
-							
-
-
-							<li>
-								<a href="/user/code">
-									<i class="icon icon-lg">code</i>&nbsp;充值
-								</a>
-							</li>
 						</ul>
 						
 						{if $user->isAdmin()}
