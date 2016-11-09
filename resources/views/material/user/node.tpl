@@ -28,6 +28,7 @@
 									<h4>注意!</h4>
 									<p>请勿在任何地方公开节点地址！</p>
 									<p>流量比例为0.5即使用1000MB按照500MB流量记录记录结算.</p>
+									<p><font color="Dark red">本站节点全部锐速加持，隐藏节点付费用户可见。</font></p>
 									<a href="javascript:void(0);" onClick="urlChange('guide',0)">如果您不知道如何查看节点的详细信息和二维码，请点我。</a>
 								</div>
 							</div>
@@ -75,8 +76,25 @@
 																			
 																			
 																			{if $node->sort > 2 && $node->sort != 5}
-																				<p>地址：<span class="label" > 
-																				<a href="javascript:void(0);" onClick="urlChange('{$node->id}',0)">请点这里进入查看详细信息</a>
+																				<p>地址：<span class="label label-brand-accent"> 
+									                                        	本站任意节点地址(不包含谷歌节点）															
+									                                        	</span></p>
+																					
+									                                        	<p>端口：<span class="label label-brand-red"> 
+										                                        {$node->status}
+										                                        </span></p>
+																					
+										                                        <p>加密方式：<span class="label label-brand"> 
+										                                        aes-256-cfb
+										                                        </span></p>
+																					
+										                                        <p>协议：<span class="label label-red">  
+										                                        auth_sha1_compatible
+										                                        </span></p>
+																					
+										                                        <p>混淆方式：<span class="label label-orange"> 
+										                                        http_simple_compatible
+										                                        </span></p>	
 																			{else}
 																				<p>地址：<span class="label label-brand-accent"> 
 																				{$node->server}
