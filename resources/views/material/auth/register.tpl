@@ -12,7 +12,7 @@
 							<div class="card-main">
 								<div class="card-header">
 									<div class="card-inner">
-										<h1 class="card-heading">和我签订契约，成为魔法少女吧。</h1>
+										<h1 class="card-heading">欢迎注册{$config["appName"]}，请仔细阅读服务条款，如不能接受，请不要注册。</h1>
 									</div>
 								</div>
 								<div class="card-inner">
@@ -25,7 +25,7 @@
 										<div class="form-group form-group-label">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
-													<label class="floating-label" for="name">昵称</label>
+													<label class="floating-label" for="name">昵称（必须输入一个昵称）</label>
 													<input class="form-control" id="name" type="text">
 												</div>
 											</div>
@@ -34,7 +34,7 @@
 										<div class="form-group form-group-label">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
-													<label class="floating-label" for="email">邮箱</label>
+													<label class="floating-label" for="email">请输入有效邮箱</label>
 													<input class="form-control" id="email" type="text">
 												</div>
 											</div>
@@ -64,7 +64,7 @@
 										<div class="form-group form-group-label">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
-													<label class="floating-label" for="repasswd">重复密码</label>
+													<label class="floating-label" for="repasswd">再输一次密码</label>
 													<input class="form-control" id="repasswd" type="password">
 												</div>
 											</div>
@@ -102,7 +102,7 @@
 											<div class="form-group form-group-label">
 												<div class="row">
 													<div class="col-md-10 col-md-push-1">
-														<label class="floating-label" for="code">邀请码</label>
+														<label class="floating-label" for="code">输入注册码</label>
 														<input class="form-control" id="code" type="text" value="{$code}">
 													</div>
 												</div>
@@ -152,13 +152,13 @@
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-heading">
-										<h2 class="modal-title">注册 TOS</h2>
+										<h2 class="modal-title">注册前请仔细阅读本服务条款</h2>
 									</div>
 									<div class="modal-inner">
 										{include file='reg_tos.tpl'}
 									</div>
 									<div class="modal-footer">
-										<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button" id="cancel">我不服</button><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" id="reg" type="button">资慈</button></p>
+										<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button" id="cancel">我不服</button><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" id="reg" type="button">我接受</button></p>
 										
 									</div>
 								</div>
