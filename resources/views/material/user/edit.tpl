@@ -358,7 +358,7 @@
 									</div>
 									<div class="card-action">
 										<div class="card-action-btn pull-left">
-											<p>不支持自定义端口</p>
+											<p>不支持自定义端口!</p>
 										</div>
 									</div>
 								</div>
