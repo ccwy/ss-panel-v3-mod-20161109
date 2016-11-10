@@ -82,6 +82,7 @@
 								</td>
 								
                                 <td>{$user->email}</td>
+				
 								{if $user->enable==1}
                                 <td>可用</td>
 								{else}
