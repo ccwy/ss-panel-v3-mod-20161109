@@ -82,7 +82,6 @@
 								</td>
 								
                                 <td>{$user->email}</td>
-                                <td>{$user->port}</td>
 								{if $user->enable==1}
                                 <td>可用</td>
 								{else}
