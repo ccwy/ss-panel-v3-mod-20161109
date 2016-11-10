@@ -24,7 +24,7 @@
 								<div class="card">
 									<div class="card-main">
 										<div class="card-inner">
-											<p>不忘记自己最初的梦想，或许你就有实现梦想的一天，但真到那一天了，你还是你吗？</p>
+											<p>每天对自己好一点，生活才会有更多乐趣！</p>
 										</div>
 									</div>
 								</div>
