@@ -192,9 +192,7 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">签到获取流量</p>
-											<p>流量不会重置，可以通过签到获取流量。</p>
-
-											<p>每次签到可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
+											
 										
 											<p>每天可以签到一次。您可以点击按钮或者摇动手机来签到。</p>
 																						
