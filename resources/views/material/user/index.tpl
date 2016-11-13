@@ -50,8 +50,9 @@
 										{else}
 										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 请到App Store商店下载shadowrocket（小火箭）安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue">（推荐这种方法）</font></p>
 										{/if}
+										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 强烈推荐下载<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>，然后在 Safari 中点击<a id="android_add" href="{$android_add}">这个</a>，然后点击确定，就可以批量添加节点。</p>										
+ +										<STRIKE><p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 下载<a href="/link/{$ios_token}">这个</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p></STRIKE>
 										
-										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 下载<a href="/link/{$ios_token}">这个</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p>
 										<p><a href="/downloads/client/ssr_3.2.7.8.apk"><i class="icon icon-lg">android</i>&nbsp;Android下载这个</a>（最新版本：3.2.7.8）安装，然后在手机上默认浏览器中点击<a id="android_add" href="{$android_add}">这个</a>，然后点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。</p>
 									</div>
 									
