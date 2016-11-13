@@ -46,9 +46,9 @@
 										<p><a href="https://github.com/qinyuhang/ShadowsocksX-NG/releases"><i class="icon icon-lg">laptop_mac</i>&nbsp;Mac OS X下载这个</a>，安装，然后下载<a href="/user/getpcconf">这个</a>，运行程序，小飞机上右键 服务器列表 子菜单 的 “导入服务器配置文件...” 导入这个文件，然后选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</p>
 										
 										{if $user->class>=1}
-										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 请到App Store商店下载shadowrocket（小火箭）安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue">（推荐这种方法）</font></p>										
+										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 强烈推荐下载<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue"></font></p>										
 										{else}
-										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 强烈推荐下载<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue">（推荐这种方法）</font></p>
+										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 强烈推荐下载<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue"></font></p>
 										{/if}
 																		
  +										<STRIKE><p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 下载<a href="/link/{$ios_token}">这个</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p></STRIKE>
