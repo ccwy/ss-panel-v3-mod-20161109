@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Command;
 use App\Models\Node;
 use App\Models\User;
@@ -25,7 +24,6 @@ use App\Utils\GA;
 use App\Utils\Telegram;
 use CloudXNS\Api;
 use App\Models\Disconnect;
-
 class Job
 {
 	public static function syncnode()
@@ -44,7 +42,6 @@ class Job
 	public static function backup()
 	{
 		mkdir('/tmp/ssmodbackup/');
-
 		$db_address_array = explode(':',Config::get('db_host'));
 		
 		system('mysqldump --user='.Config::get('db_username').' --password='.Config::get('db_password').' --host='.$db_address_array[0].' '.(isset($db_address_array[1])?'-P '.$db_address_array[1]:'').' '.Config::get('db_database').' announcement auto blockip bought code coupon disconnect_ip link login_ip payback radius_ban shop speedtest ss_invite_code ss_node ss_password_reset ticket unblockip user user_token email_verify detect_list> /tmp/ssmodbackup/mod.sql',$ret);
@@ -141,17 +138,11 @@ class Job
 				}
 			}
 		}
-		
-		
-		if(date("d")==14)
-		{
-			Ip::truncate();
-			NodeInfoLog::truncate();
-			NodeOnlineLog::truncate();
-			TrafficLog::truncate();
-			DetectLog::truncate();
-			Telegram::Send("姐姐姐姐，数据库被清空，感觉身体被掏空了呢~");
-		}
+		NodeInfoLog::where("log_time","<",time()-86400*3)->delete();
+		NodeOnlineLog::where("log_time","<",time()-86400*3)->delete();;
+		TrafficLog::where("log_time","<",time()-86400*3)->delete();;
+		DetectLog::where("datetime","<",time()-86400*3)->delete();;
+		Telegram::Send("姐姐姐姐，数据库被清理了，感觉身体被掏空了呢~");
 		
 		
 		$users = User::all();
@@ -352,8 +343,6 @@ class Job
 				
 				$bought->renew=0;
 				$bought->save();
-
-
 				$bought_new=new Bought();
 				$bought_new->userid=$user->id;
 				$bought_new->shopid=$shop->id;
@@ -404,7 +393,6 @@ class Job
 		
 		Ip::where("datetime","<",time()-300)->delete();
 		
-
 		$adminUser = User::where("is_admin","=","1")->get();
 		
 		$latest_content = file_get_contents("https://github.com/glzjin/ss-panel-v3-mod/raw/master/bootstrap.php");
@@ -450,7 +438,6 @@ class Job
 				}
 			}
 		}
-
 		
 		//节点掉线检测
 		if(Config::get("node_offline_warn")=="true")
@@ -512,7 +499,6 @@ class Job
 									{								
 										$api->record->recordUpdate($domain_id, $record->host, $Temp_node->server, 'CNAME', 55, 60, 1, '', $record_id);
 									}
-
 									$notice_text = "喵喵喵~ ".$node->name." 节点掉线了喵~域名解析被切换到了 ".$Temp_node->name." 上了喵~";
 								}
 							}
@@ -524,7 +510,6 @@ class Job
 						
 						
 					}
-
 					Telegram::Send($notice_text);
 					
 					$myfile = fopen(BASE_PATH."/storage/".$node->id.".offline", "w+") or die("Unable to open file!");
@@ -593,7 +578,6 @@ class Job
 						}
 						
 					}
-
 					Telegram::Send($notice_text);
 					
 					unlink(BASE_PATH."/storage/".$node->id.".offline");
@@ -665,7 +649,7 @@ class Job
 				
 			}
 			
-			if(strtotime($user->expire_in)<time() && ((Config::get('enable_account_expire_reset')=='true' ? $user->transfer_enable != Tools::toGB(Config::get('enable_account_expire_reset_traffic')) : True) && (Config::get('enable_class_expire_reset')=='true' ? $user->transfer_enable != Tools::toGB(Config::get('enable_class_expire_reset_traffic')) : True)))
+			if(strtotime($user->expire_in) < time() && (((Config::get('enable_account_expire_reset')=='true' && strtotime($user->expire_in) < time()) ? $user->transfer_enable != Tools::toGB(Config::get('enable_account_expire_reset_traffic')) : True) && ((Config::get('enable_class_expire_reset')=='true' && ($user->class!=0 && strtotime($user->class_expire)<time() && strtotime($user->class_expire) > 1420041600))? $user->transfer_enable != Tools::toGB(Config::get('enable_class_expire_reset_traffic')) : True)))
 			{
 				if(Config::get('enable_account_expire_reset')=='true')
 				{
@@ -781,7 +765,7 @@ class Job
 				}
 			}
 			
-			if($user->class!=0 && ((Config::get('enable_account_expire_reset')=='true' ? $user->transfer_enable != Tools::toGB(Config::get('enable_account_expire_reset_traffic')) : True) && (Config::get('enable_class_expire_reset')=='true' ? $user->transfer_enable != Tools::toGB(Config::get('enable_class_expire_reset_traffic')) : True)) && strtotime($user->class_expire)<time() && strtotime($user->class_expire) > 1420041600)
+			if($user->class!=0 && (((Config::get('enable_account_expire_reset')=='true' && strtotime($user->expire_in) < time()) ? $user->transfer_enable != Tools::toGB(Config::get('enable_account_expire_reset_traffic')) : True) && ((Config::get('enable_class_expire_reset')=='true' && ($user->class!=0 && strtotime($user->class_expire)<time() && strtotime($user->class_expire) > 1420041600))? $user->transfer_enable != Tools::toGB(Config::get('enable_class_expire_reset_traffic')) : True)) && strtotime($user->class_expire)<time() && strtotime($user->class_expire) > 1420041600)
 			{
 				if(Config::get('enable_class_expire_reset')=='true')
 				{
