@@ -61,7 +61,7 @@
 										<p><a href="https://github.com/qinyuhang/ShadowsocksX-NG/releases"><i class="icon icon-lg">laptop_mac</i>&nbsp;Mac OS X</a></p>
 										<p><a href="https://github.com/breakwa11/shadowsocks-rss/wiki/Python-client"><i class="icon icon-lg">laptop_windows</i>&nbsp;Linux</a></p>
 										<p><a href="https://bit.no.com:43110/shadowsocksr.bit"><i class="icon icon-lg">android</i>&nbsp;Android</a> 选择 Android 版</p>
-										<p><a href="https://itunes.apple.com/us/app/shadowrocket/id932747118"><i class="icon icon-lg">phone_iphone</i>&nbsp;iOS</a></p>
+										<p><a href="https://itunes.apple.com/us/app/shadowrocket/id932747118"><i class="icon icon-lg">phone_iphone</i>&nbsp;iOS系统使用shadowrocket</a></p>
 									</div>
 									
 								</div>
