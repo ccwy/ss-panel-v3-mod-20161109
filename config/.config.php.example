@@ -25,7 +25,7 @@ $System_Config['mailDriver'] = 'mailgun';   // mailgun or smtp
 
 // 用户签到设置
 $System_Config['checkinMin'] = '1';       // 签到最少流量 单位MB
-$System_Config['checkinMax'] = '500';       // 签到最多流量
+$System_Config['checkinMax'] = '200';       // 签到最多流量
 
 //
 $System_Config['defaultTraffic'] = '5';      // 用户初始流量 单位GB
