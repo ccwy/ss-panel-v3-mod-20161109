@@ -162,12 +162,13 @@
 						
 						{/if}
 						
+						<!--<STRIKE>
 						{if $mu == 0}
 								<div class="col-lg-12 col-sm-12">
 									<div class="card">
 										<div class="card-main">
 											<div class="card-inner margin-bottom-no">
-												<STRIKE>
+												
 													<p class="card-heading">iOS9 上 Surge 配置</p>
 													<div class="row">
 											
@@ -184,7 +185,7 @@
 															<br>
 														<div class="col-md-12">
 													</div>
-												</STRIKE>
+												</STRIKE>-->
 											</div>
 										
 										</div>
