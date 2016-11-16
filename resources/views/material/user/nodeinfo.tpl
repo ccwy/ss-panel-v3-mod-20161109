@@ -185,13 +185,15 @@
 															<br>
 														<div class="col-md-12">
 													</div>
-												</STRIKE>-->
+												
 											</div>
 										
 										</div>
 									</div>
 								</div>
 						{/if}
+						
+						</STRIKE>-->
 						
 					</div>
 				</div>
