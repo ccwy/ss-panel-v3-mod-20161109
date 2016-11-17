@@ -40,7 +40,7 @@
 								<div class="card-main">
 									<div class="card-inner">
 											<div class="card-img">
-												<img src="{$spic}" style="width: 100%;">
+												<img src="{$pic}" style="width: 100%;">
 											</div>
 									</div>
 									
