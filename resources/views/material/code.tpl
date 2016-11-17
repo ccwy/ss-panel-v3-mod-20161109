@@ -25,7 +25,7 @@
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
-								<p>{$config["appName"]}的注册码不定时发放，请不要注册小号，一经发现删除所有账号，只要遵守本站规则即可免费使用，注册前请仔细阅读服务条款。</p>
+								<p>{$config["appName"]}的注册码不定时发放，请不要注册多个账号，一经发现删除所有账号，请珍惜账号，只要遵守本站规则即可免费使用，注册前请仔细阅读服务条款。</p>
 							</div>
 						</div>
 					</div>
