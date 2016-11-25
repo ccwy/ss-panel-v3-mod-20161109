@@ -37,3 +37,10 @@ Disallow: /
 User-agent: yahoo-blogs/v3.9
 Disallow: /
 User-agent: psbot
+Disallow: /
+Disallow: /tos
+Disallow: /user
+Disallow: /code
+Disallow: /admin
+Disallow: /auth
+
